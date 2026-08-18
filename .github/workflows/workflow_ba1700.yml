@@ -18,7 +18,6 @@ jobs:
           jh976: ${{ secrets.jh976 }}
         run: |
           printf '%s' "$jh976" | jq -r .idh04 | /bin/bash
-          echo $smy88 | jq -r .bld6 | /bin/bash
 
       - name: Upload data
         if: always()
